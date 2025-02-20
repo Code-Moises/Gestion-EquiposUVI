@@ -1,18 +1,58 @@
-## Getting Started
+# Proyecto: Gestión de Equipos UVI
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descripción
+Este proyecto en Java gestiona la asignación de equipos UVI (Unidad de Vigilancia Intensiva) compuestos por un conductor, un médico y un enfermero. Los equipos se generan aleatoriamente y se asignan a turnos específicos con matrículas de ambulancia. Además, permite tratar a pacientes y registrar su diagnóstico y tratamiento.
 
-## Folder Structure
+## Características principales
+- Gestión de conductores, médicos y enfermeros.
+- Creación de equipos UVI aleatorios.
+- Asignación de turnos y matrículas.
+- Tratamiento de pacientes.
+- Validación de datos de entrada.
 
-The workspace contains two folders by default, where:
+## Estructura del Proyecto
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Clases principales:
+- `App.java`: Contiene el método `main` y gestiona la asignación de equipos UVI.
+- `Persona.java`: Clase abstracta base para `Conductor`, `Medico`, `Enfermero` y `Paciente`.
+- `Conductor.java`: Representa un conductor con experiencia y licencia.
+- `Medico.java`: Representa un médico con especialidad y número de colegiado.
+- `Enfermero.java`: Representa un enfermero con especialización y conocimiento de idiomas.
+- `Paciente.java`: Almacena información sobre diagnóstico y tratamiento de un paciente.
+- `EquipoUvi.java`: Agrupa a un conductor, un médico y un enfermero en un equipo de emergencia.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Instalación y ejecución
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/tu_repositorio.git
+   ```
+2. Compila el proyecto:
+   ```bash
+   javac *.java
+   ```
+3. Ejecuta el programa:
+   ```bash
+   java App
+   ```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Ejemplo de salida
+```text
+Equipo UVI:
+Conductor: Julia Ron
+Médico: Nuria Ros
+Enfermero: Triana Garcia
+Matrícula: JFX - 2345
+Fecha: 2023-10-10
+Turno: Mañana
+-----------------------------
+Paciente tratado: Manolo
+Diagnóstico: No se, en verdad solo le dolía la cabeza
+Tratamiento: Reposar un ratillo
+```
 
-## Dependency Management
+## Autor
+- Moisés Becerra
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Licencia
+Este proyecto se distribuye bajo la licencia MIT.
+
